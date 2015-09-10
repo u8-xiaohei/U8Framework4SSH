@@ -40,6 +40,7 @@ web/	:MVC模式典型的Web层，这里写struts2的Action
 
 1、我们会抽象出来一个User对象。那么在data目录下，新建一个UUser对象：
 
+```java
 /**
  * 用户数据对象
  * 约定：所有字段的名称，都需要和数据库表格中的字段名称一致
@@ -155,12 +156,15 @@ public class UUser {
         this.token = token;
     }
 }
+```
 
 2、有了UUser对象之后，我们需要对该对象进行一些操作。首先就是数据访问，我们需要从数据库中获取到该对象对应的数据表，所以，我们在dao目录下新建一个UUserDao类，作为UUser对象的数据访问类。所有Dao数据访问类都继承UHibernateTemplate。这个抽象类有两个泛型参数。
 第一个是当前数据访问类需要访问的数据对象，第二个参数是当前数据对象的主键类型
 
 注意：所有数据访问类，都需要使用@Repository注解来声明，括号里面的名称为后面其他地方申明该类的对象时所必须使用的名称。
 
+
+```java
 /**
  * 用户数据访问类
  */
@@ -224,6 +228,7 @@ public class UUserManager {
         userDao.delete(user);
     }
 }
+```
 
 
 4、有了UUser相关的数据对象和业务操作之后，我们需要一个控制器，来控制URL的访问，参数解析验证，调用业务层的逻辑进行处理，然后返回给客户端对应的结果。我们在web目录下，新建一个UserAction类。
@@ -238,6 +243,8 @@ http://localhost:8080/users/getAllUsers : 分页获取用户数据
 http://localhost:8080/users/saveUser  : 增加或者编辑用户数据
 http://localhost:8080/users/removeUser : 删除某个用户数据
 
+
+```java
 @Controller		//所有Action都加上Controller注解
 @Namespace("/users")	//根据业务区分Namespace，用Namespace主要防止命名冲突，并格式规范URL
 public class UserAction extends UActionSupport implements ModelDriven<UUser>{
@@ -380,12 +387,13 @@ public class UserAction extends UActionSupport implements ModelDriven<UUser>{
         this.currUserID = currUserID;
     }
 }
+```
 
 开发SSH2项目，建议使用IntelliJ IDEA ，该框架也是基于该IDE开发的。如果是其他IDE，可能需要手动转换并重新配置下。
 
 另外，欢迎大家访问我们的官方博客,并加入我们的技术群
 
-官方博客：http://www.uustory.com
+官方博客：[http://www.uustory.com](http://www.uustory.com)
 技术QQ群：207609068
 
 
