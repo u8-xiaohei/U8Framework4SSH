@@ -242,8 +242,11 @@ public class UUserManager {
 建议，将同一个业务的方法写在一个Action类中。比如这里User对象的操作。增删改查等操作，都在该类中
 
 http://localhost:8080/users/showUsers : 打开用户列表界面
+
 http://localhost:8080/users/getAllUsers : 分页获取用户数据
+
 http://localhost:8080/users/saveUser  : 增加或者编辑用户数据
+
 http://localhost:8080/users/removeUser : 删除某个用户数据
 
 
