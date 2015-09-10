@@ -1,0 +1,19 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="PackServer:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/PackServer_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="PackServer/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="PackServer" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="sdk" />
+          <element id="library" level="project" name="spring" />
+          <element id="library" level="project" name="hibernate" />
+          <element id="library" level="project" name="struts2" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

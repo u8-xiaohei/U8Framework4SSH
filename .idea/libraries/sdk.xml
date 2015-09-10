@@ -1,0 +1,27 @@
+<component name="libraryTable">
+  <library name="sdk">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/lib/jars/sdk" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ideaLibSources/httpasyncclient-4.0.2-sources.jar!/" />
+      <root url="jar://F:/资料/src/httpcomponents-core-4.4.1-src.zip!/httpcomponents-core-4.4.1/httpcore-ab/src/main/java" />
+      <root url="jar://F:/资料/src/httpcomponents-core-4.4.1-src.zip!/httpcomponents-core-4.4.1/httpcore-ab/src/test/java" />
+      <root url="jar://F:/资料/src/httpcomponents-core-4.4.1-src.zip!/httpcomponents-core-4.4.1/httpcore-nio/src/examples" />
+      <root url="jar://F:/资料/src/httpcomponents-core-4.4.1-src.zip!/httpcomponents-core-4.4.1/httpcore-nio/src/main/java" />
+      <root url="jar://F:/资料/src/httpcomponents-core-4.4.1-src.zip!/httpcomponents-core-4.4.1/httpcore-nio/src/main/java-deprecated" />
+      <root url="jar://F:/资料/src/httpcomponents-core-4.4.1-src.zip!/httpcomponents-core-4.4.1/httpcore-nio/src/test/java" />
+      <root url="jar://F:/资料/src/httpcomponents-core-4.4.1-src.zip!/httpcomponents-core-4.4.1/httpcore/src/examples" />
+      <root url="jar://F:/资料/src/httpcomponents-core-4.4.1-src.zip!/httpcomponents-core-4.4.1/httpcore/src/main/java" />
+      <root url="jar://F:/资料/src/httpcomponents-core-4.4.1-src.zip!/httpcomponents-core-4.4.1/httpcore/src/main/java-deprecated" />
+      <root url="jar://F:/资料/src/httpcomponents-core-4.4.1-src.zip!/httpcomponents-core-4.4.1/httpcore/src/test/java" />
+      <root url="file://F:/资料/src/httpcomponents-core-4.4.1-src/httpcomponents-core-4.4.1/httpcore/src/examples" />
+      <root url="file://F:/资料/src/httpcomponents-core-4.4.1-src/httpcomponents-core-4.4.1/httpcore/src/main/java" />
+      <root url="file://F:/资料/src/httpcomponents-core-4.4.1-src/httpcomponents-core-4.4.1/httpcore/src/main/java-deprecated" />
+      <root url="file://F:/资料/src/httpcomponents-core-4.4.1-src/httpcomponents-core-4.4.1/httpcore/src/test/java" />
+      <root url="file://F:/资料/src/httpcomponents-core-4.4.1-src/httpcomponents-core-4.4.1/httpcore/src/main/java" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/lib/jars/sdk" recursive="false" />
+  </library>
+</component>
