@@ -10,11 +10,11 @@ U8Server是U8SDK统一渠道SDK接入框架的服务器端。U8Server采用成�
 
 整个框架，基于MVC思想模式，同时所有配置通过注解进行。避免通过配置文件配置带来的繁琐和复杂。
 
-依赖Jar包：
+###依赖Jar包：
 
 lib/jars目录下为SSH2框架所依赖的一些jar包。添加新的jar包注意，不要导致jar包冲突。
 
-框架配置说明：
+###框架配置说明：
 
 applicationContext.xml：Spring容器的配置，所有的组件管理和依赖注入(IOC)都由Spring管理，基本固定，不用修改
 jdbc.properties：数据库相关配置，在这里修改数据库连接信息即可
@@ -22,23 +22,23 @@ log4j.properties：日志配置，基本固定，不用修改
 struts.xml：struts2的配置，因为我们采用注解配置方式，所以该文件配置很少，而且固定
 WEB-INF\web.xml：这个是web项目的固定配置，需要配置struts2,spring,hibernate等的过滤器和监听器等。基本固定，不用修改
 
-源码目录（根为com.u8.server）：
+###源码目录（根目录为com.u8.server）：
 
-cache/	:缓存相关类目录。U8Server中对游戏对象，渠道对象，渠道商对象进行了缓存
-common/ :该目录下为U8Server对SSH2框架的一个简单封装
-dao/	:MVC模式典型的DAO层(数据访问层)
-data/	:数据对象
-filters/:struts2过滤器，比如后台管理操作，需要登录用户和拥有相关权限的用户才能进行，通过过滤器来拦截
-log/	:日志目录
-service/:MVC模式典型的Service层(业务逻辑层)
-utils/	:常用辅助工具类
-web/	:MVC模式典型的Web层，这里写struts2的Action
+* cache/	:缓存相关类目录。U8Server中对游戏对象，渠道对象，渠道商对象进行了缓存
+* common/ :该目录下为U8Server对SSH2框架的一个简单封装
+* dao/	:MVC模式典型的DAO层(数据访问层)
+* data/	:数据对象
+* filters/:struts2过滤器，比如后台管理操作，需要登录用户和拥有相关权限的用户才能进行，通过过滤器来拦截
+* log/	:日志目录
+* service/:MVC模式典型的Service层(业务逻辑层)
+* utils/	:常用辅助工具类
+* web/	:MVC模式典型的Web层，这里写struts2的Action
 
-框架使用：
+###框架使用：
 
 比如现在需要开发一个用户管理系统，
 
-1、我们会抽象出来一个User对象。那么在data目录下，新建一个UUser对象：
+#####1、我们会抽象出来一个User对象。那么在data目录下，新建一个UUser对象：
 
 ```java
 /**
@@ -158,8 +158,7 @@ public class UUser {
 }
 ```
 
-2、有了UUser对象之后，我们需要对该对象进行一些操作。首先就是数据访问，我们需要从数据库中获取到该对象对应的数据表，所以，我们在dao目录下新建一个UUserDao类，作为UUser对象的数据访问类。所有Dao数据访问类都继承UHibernateTemplate。这个抽象类有两个泛型参数。
-第一个是当前数据访问类需要访问的数据对象，第二个参数是当前数据对象的主键类型
+##### 2、有了UUser对象之后，我们需要对该对象进行一些操作。首先就是数据访问，我们需要从数据库中获取到该对象对应的数据表，所以，我们在dao目录下新建一个UUserDao类，作为UUser对象的数据访问类。所有Dao数据访问类都继承UHibernateTemplate。这个抽象类有两个泛型参数。第一个是当前数据访问类需要访问的数据对象，第二个参数是当前数据对象的主键类型
 
 注意：所有数据访问类，都需要使用@Repository注解来声明，括号里面的名称为后面其他地方申明该类的对象时所必须使用的名称。
 
@@ -176,7 +175,7 @@ public class UUserDao extends UHibernateTemplate<UUser, Integer>{
 }
 ```
 
-3、有了UUserDao，我们还需要在service目录下新建一个UUserManager作为UUser对象的业务操作类。
+##### 3、有了UUserDao，我们还需要在service目录下新建一个UUserManager作为UUser对象的业务操作类。
 
 注意：所有业务操作类，都必须使用@Service注解来声明，括号里面的名称为后面其他地方申明该类的对象时所必须使用的名称。
 
@@ -234,7 +233,7 @@ public class UUserManager {
 ```
 
 
-4、有了UUser相关的数据对象和业务操作之后，我们需要一个控制器，来控制URL的访问，参数解析验证，调用业务层的逻辑进行处理，然后返回给客户端对应的结果。我们在web目录下，新建一个UserAction类。
+##### 4、有了UUser相关的数据对象和业务操作之后，我们需要一个控制器，来控制URL的访问，参数解析验证，调用业务层的逻辑进行处理，然后返回给客户端对应的结果。我们在web目录下，新建一个UserAction类。
 
 注意：所有的Action类，都必须继承UActionSupport类。UActionSupport是common目录下，对struts2的一个简单的封装。
 如果需要该Action采用数据驱动方式传递参数，那么还要实现ModelDriven接口。
