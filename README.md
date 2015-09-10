@@ -174,11 +174,14 @@ public class UUserDao extends UHibernateTemplate<UUser, Integer>{
 	//data operate
 
 }
+```
 
 3、有了UUserDao，我们还需要在service目录下新建一个UUserManager作为UUser对象的业务操作类。
 
 注意：所有业务操作类，都必须使用@Service注解来声明，括号里面的名称为后面其他地方申明该类的对象时所必须使用的名称。
 
+
+```java
 /**
  * 这里处理UUser相关的逻辑操作
  */
