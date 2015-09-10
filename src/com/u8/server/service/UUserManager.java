@@ -36,13 +36,6 @@ public class UUserManager {
         return userDao.find(hql, new Object[]{channelID}, null);
     }
 
-    //获取用户数量
-    public long getUserCount(){
-
-        String hql = "select count(id) from UUser";
-        return userDao.findLong(hql, null);
-    }
-
     //分页查找
     public Page<UUser> queryPage(int currPage, int num){
 

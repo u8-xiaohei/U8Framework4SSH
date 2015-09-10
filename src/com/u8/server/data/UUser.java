@@ -1,6 +1,5 @@
 package com.u8.server.data;
 
-import com.u8.server.utils.TimeFormater;
 import net.sf.json.JSONObject;
 
 import javax.persistence.*;
@@ -36,8 +35,6 @@ public class UUser {
         json.put("channelUserID", channelUserID);
         json.put("channelUserName", channelUserName);
         json.put("channelUserNick", channelUserNick);
-        json.put("createTime", TimeFormater.format_default(createTime));
-        json.put("lastLoginTime", TimeFormater.format_default(lastLoginTime));
         return json;
     }
 

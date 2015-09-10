@@ -64,6 +64,24 @@ public class UserAction extends UActionSupport implements ModelDriven<UUser>{
         }
     }
 
+    //添加或者编辑
+    //http://localhost:8080/users/saveUser
+    @Action("saveUser")
+    public void saveUser(){
+        try{
+
+            userManager.saveUser(this.user);
+            renderState(true);
+
+            return;
+
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
+        renderState(false);
+    }
+
     //http://localhost:8080/users/removeUser
     @Action("removeUser")
     public void removeUser(){
