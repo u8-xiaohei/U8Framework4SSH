@@ -5,7 +5,9 @@ import com.u8.server.log.Log;
 import java.nio.charset.Charset;
 import java.security.MessageDigest;
 
-
+/**
+* 数据加密处理
+*/
 public class EncryptUtils {
 
     public static String md5(String txt){
