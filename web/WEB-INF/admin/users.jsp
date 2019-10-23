@@ -1,6 +1,6 @@
 <%--
   Created by IntelliJ IDEA.
-  User: xiaohei
+  User: ant
   Date: 2015/8/22
   Time: 14:01
   To change this template use File | Settings | File Templates.
@@ -18,7 +18,7 @@
 </head>
 <body>
 
-Users
+用户协议
 
 </body>
 </html>

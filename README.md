@@ -18,7 +18,7 @@ lib/jars目录下为SSH2框架所依赖的一些jar包。添加新的jar包注�
 
 applicationContext.xml：Spring容器的配置，所有的组件管理和依赖注入(IOC)都由Spring管理，基本固定，不用修改
 jdbc.properties：数据库相关配置，在这里修改数据库连接信息即可
-log4j.properties：日志配置，基本固定，不用修改
+log4j.properties：日志配置, 如果需要配置包名下面的日志级别，就在这里配置
 struts.xml：struts2的配置，因为我们采用注解配置方式，所以该文件配置很少，而且固定
 WEB-INF\web.xml：这个是web项目的固定配置，需要配置struts2,spring,hibernate等的过滤器和监听器等。基本固定，不用修改
 
